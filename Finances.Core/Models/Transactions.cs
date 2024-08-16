@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Finances.Core.Models
 {
-    public class Transaction
+    public class Transactions
     {
         public long Id { get; set; }
         public string Title { get; set; } = string.Empty;
@@ -21,5 +21,7 @@ namespace Finances.Core.Models
         public Category Category { get; set; } = null!;
 
         public string UserId { get; set; } = string.Empty;
+        public DateTime CreatedAt { get; set; }
+        public DateTime? PaidOrReceivedAt { get; set; }
     }
 }

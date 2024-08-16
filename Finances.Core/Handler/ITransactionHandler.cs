@@ -1,5 +1,4 @@
 ﻿using Finances.Core.Models;
-using Finances.Core.Requests.Categories;
 using Finances.Core.Requests.Transactions;
 using Finances.Core.Responses;
 using System;
@@ -10,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace Finances.Core.Handler
 {
-    internal interface ITransactionHandler
+    public interface ITransactionHandler
     {
-        Task<Response<Transaction?>> CreateAsync(CreateTransactionRequest request);
-        Task<Response<Transaction?>> UpdateAsync(UpdateTransactionRequest request);
-        Task<Response<Transaction?>> DeleteAsync(DeleteTransactionRequest request);
-        Task<Response<Transaction?>> GetByIdAsync(GetTransactionByIdRequest request);
-        Task<PagedResponse<List<Transaction?>>> GetByPeriodAsync(GetTransactionByPeriodRequest request);
+        Task<Response<Transactions?>> CreateAsync(CreateTransactionRequest request);
+        Task<Response<Transactions?>> UpdateAsync(UpdateTransactionRequest request);
+        Task<Response<Transactions?>> DeleteAsync(DeleteTransactionRequest request);
+        Task<Response<Transactions?>> GetByIdAsync(GetTransactionByIdRequest request);
+        Task<PagedResponse<List<Transactions?>>> GetByPeriodAsync(GetTransactionByPeriodRequest request);
     }
 }

@@ -26,6 +26,6 @@ namespace Finances.Core.Requests.Transactions
 
         [Required(ErrorMessage = "Data Inválida")]
         public DateTime? PaidOrReceivedAt { get; set; }
-        
+        public string UserId { get; set; }
     }
 }

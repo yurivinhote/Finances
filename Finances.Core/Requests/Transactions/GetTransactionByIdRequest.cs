@@ -9,5 +9,7 @@ namespace Finances.Core.Requests.Transactions
     public class GetTransactionByIdRequest : Request
     {
         public long Id { get; set; }
+        public object? StartDate { get; set; }
+        public object? EndDate { get; set; }
     }
 }
